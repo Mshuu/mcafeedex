@@ -524,7 +524,8 @@ left: 0;
 right: none;
 /* position: relative; */
 /* margin-top: 650px; */
-min-width: 100% !important;
+min-width: 95vw !important;
+margin-left: -40vw !important;
   }
   .navbar {
     margin-left: 0px !important;
@@ -2861,7 +2862,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     border-left: .3em solid transparent;
     position: absolute;
     top: 45%;
-    right: 0.7rem;
 }
 
 .dropdown-toggle:empty:after {
@@ -3449,6 +3449,27 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     margin-top: 0px !important;
     max-width: none !important;
   }
+  .settingsdropdown{
+    top: 45px !important;
+        max-width: 95vw !important;
+        left: 0 !important;
+        margin-left: 49vw !important;
+  }
+  .balancesDropdown{
+    background: #FFFFFF;
+    color: #898989;
+    min-width: 25rem;
+    left: 0;
+    float: left;
+    right: none;
+    max-width: 95vw;
+    margin-left: 2vw !important;
+    /* position: relative; */
+    top: 0 !important;
+  }
+  .dropdown-item{
+    font-size: 10px;
+  }
   .trading-cont>div:nth-child(2) {
     margin-top: 0.2rem !important
   }
@@ -3495,7 +3516,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color: #e5e5e5 !important;
     font-size: 14px;
     position: fixed;
-    height: 35%;
     top: 50px;
   }
   .flexP{
@@ -7894,9 +7914,6 @@ a.text-dark:focus,a.text-dark:hover {
 }
 
 @media screen and (max-width: 568px) {
-    .alertify .ajs-dialog {
-        min-width:150px
-    }
 
     .alertify:not(.ajs-maximized) .ajs-modal {
         padding: 0 5%
@@ -13050,7 +13067,6 @@ color: #000000;
 }
 
 .alertify .ajs-dialog {
-    min-width: 790px!important
 }
 
 .btn.btn-xs {

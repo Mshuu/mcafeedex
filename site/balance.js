@@ -335,12 +335,17 @@ function GetEthPrice(tokens){
 
     "data": JSON.stringify(data1)
 
-  }
+  };
 
-  $.ajax(settings).done(function (response) {
-    basePrice = JSON.parse(response).ethPrice
+  var request = $.ajax(settings);
+  request.done(function (response) {
+    basePrice = JSON.parse(response).ethPrice;
     console.log(response);
-    FillTable(tokens,JSON.parse(response).ethPrice);
+    FillTable(tokens);
+  });
+  request.fail(function() {
+    basePrice = 0;
+    FillTable(tokens);
   });
 }
 

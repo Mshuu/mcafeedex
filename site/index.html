@@ -37,7 +37,7 @@
     </div>
     <div class="burgerMenuHolder navBarDiv">
       <div class="burgerMenu"></div>
-            <div class="burgerMenu" onClick="document.getElementById('burgerMenuDropdown').style.display == 'none' ? document.getElementById('burgerMenuDropdown').style.display = 'flex' : document.getElementById('burgerMenuDropdown').style.display = 'none'"></div>
+            <div class="burgerMenu" onClick="HideMenu()"></div>
                   <div class="burgerMenu"></div>
                 </div>
     <div class="lineBreak">
@@ -253,7 +253,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" type="text/javascript"></script>
 
 
+<script type="text/javascript">
+function HideMenu(){
+  if (document.getElementById('burgerMenuDropdown').style.display == 'none'){
+    document.getElementById('burgerMenuDropdown').style.display = 'flex';
+    document.getElementById('balancesDropdown2').style.display = 'none';
+  } else {
 
-<script type="text/javascript" src="main.6cfdd60c6d0446e78031.js"></script></body>
+    document.getElementById('balancesDropdown2').style.display = 'none';
+    document.getElementById('burgerMenuDropdown').style.display = 'none';
+  }
+}
+</script>
+<script type="text/javascript" src="main.6cfdd60c6d0446e78031.js"></script>
+</div></body>
 
 </html>
