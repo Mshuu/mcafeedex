@@ -12708,6 +12708,10 @@ border-right: 1px solid var(--eleventh-color);
 margin-bottom: 0px !important;
 min-height: 3rem;
 position: relative;
+
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .navBarDiv::last-of-type{
@@ -12909,13 +12913,9 @@ margin-bottom: 0.7rem;
 .flexP{
   font-size: 16px;
   cursor: pointer !important;
-      position: absolute;
-      left: 0;
-      bottom: 0.4rem;
       margin-bottom: 0;
       margin-left: auto;
       margin-right: auto;
-      right: 0;
       color: #e5e5e5;
       font-weight: normal;
       padding: 0;
