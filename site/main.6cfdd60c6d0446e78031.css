@@ -12704,9 +12704,14 @@ font-style: normal;
 font-weight: normal;
 font-size: 0.8rem !important;
 color: var(--fith-color);
+border-right: 1px solid var(--eleventh-color);
 margin-bottom: 0px !important;
 min-height: 3rem;
 position: relative;
+}
+
+.navBarDiv::last-of-type{
+    border-right: none;
 }
 .LogoDiv{
   flex:3;
