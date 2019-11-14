@@ -1,269 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59284329-2"></script>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-59284329-2');
-</script>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="fa.png" rel="icon" />
-  <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
-  <title>Dipass</title>
-<link href="main.6cfdd60c6d0446e78031.css" rel="stylesheet"></head>
-<body class="dark">
-  <div style="height: 100%">
-    <div id="overlay"></div>
-  <nav class="navbar navbar-light navbar-expand-lg">
-    <div class="navBarContainer">
-      <div class="LogoDiv navBarDiv">
-        <a class="navbar-brand" href="/">
-        </a>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/images/favicon.ico" rel="icon" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+<link href="/css/alertify.min.css" rel="stylesheet" />
+<link href="/css/alertify-bootstrap.min.css" rel="stylesheet" />
+<link href="/css/cstmcss.css" rel="stylesheet">
+<link href="/css/themestyle.css" rel="stylesheet" id="stylesheet" />
+<link href="/css/small.css" rel="stylesheet" media="only screen and (max-device-width: 480px)" />
+<title>Dipassio</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-expand-lg">
+    <a class="navbar-brand" href="/"> <img src="/images/title.png" /> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="theme-selector nav-item">
+          <a class="nav-link" href="javascript:;" onclick="document.querySelector('body').classList.remove('light'); document.querySelector('body').classList.add('dark');">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </a>
+          <a class="nav-link" href="javascript:;" onclick="document.querySelector('body').classList.remove('dark'); document.querySelector('body').classList.add('light');">
+            <i class="fa fa-sun-o" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown" id="tokensDropdown"></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown" id="helpDropdown"></li>
+        <li class="nav-item dropdown" id="tokenGuidesDropdown"></li>
+        <li class="nav-item dropdown" id="connection"></li>
+        <li class="nav-item dropdown" id="languages"></li>
+        <li class="nav-item dropdown" id="accounts"></li>
+      </ul>
     </div>
-    <div class="lineBreak">
-    </div>
-    <div class="selectMarketDiv navBarDiv" id="selectMarketDiv">
-    <!--  <p class="flexP">Select Market <i class="arrow down"></i></p> -->
-    </div>
-    <div class="burgerMenuHolder navBarDiv">
-      <div class="burgerMenu"></div>
-            <div class="burgerMenu" onClick="HideMenu()"></div>
-                  <div class="burgerMenu"></div>
-                </div>
-    <div class="lineBreak">
-    </div>
-    <div class="blankDiv navBarDiv">
-      &nbsp;
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="addTokenDiv navBarDiv" id="navbarDiv">
-      <!--
-      React.createElement("li", {
-          className: "dropdown-item"
-      }, React.createElement("a", {
-          href: "javascript:;",
-          onClick: this.openModal.bind(this.self, "otherToken")
-      }, React.createElement("span", {
-          className: "trn"
-      }, "Add Token")))
-    -->
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="balancesDiv navBarDiv" id="balancesDiv">
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="whitelistDiv navBarDiv" id="whitelistdiv">
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="whitelistCheckerDiv navBarDiv">
-      <a class="flexP" href="http://whitelist.switchdex.ag/" target="_blank">Whitelist Checker</a>
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="settingsDiv navBarDiv" id="settingsButton" style="display: none">
-    </div>
-    <div class="lineBreak">
-    </div>
-    <div class="accountDiv navBarDiv" id="accounts">
-    </div>
-    <!--
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-
-          <li class="nav-item dropdown" id="tokensDropdown" style="min-width:7rem;"></li>
-          <li class="nav-item dropdown" id="baseTokens" style="min-width: 7rem"></li>
-          <li class="nav-item dropdown" id="accounts" style="min-width: 7rem"></li>
-        </ul>
-      </div>
-    -->
-  </div>
   </nav>
-  <div class="mobileMenu" id="burgerMenuDropdown" onMouseEnter="document.getElementById('burgerMenuDropdown').style.display='flex'" onMouseLeave = "document.getElementById('burgerMenuDropdown').style.display = 'none'" style="display: none">
-    <div class="mobileMenuSpan" id="navbarDiv2"></div>
-    <div class="mobileMenuSpan" id="balancesDiv2"></div>
-    <div class="mobileMenuSpan" id="whitelistdiv2"></div>
-     <a class="mobileMenuSpan" href="http://whitelist.switchdex.ag/" target="_blank">Whitelist Checker</a>
-    <div class="mobileMenuSpan" id="settingsButton2"></div>
-    <div class="mobileMenuSpan" id="accounts2"><div>
-  </div>
-</div>
-</div>
-<div>
-  <div class="statBarDiv">
-    <div class="circleThing" id="circleThing"></div>
-    <div class="tokenPairingDiv" id="tokenPairingDiv">
-      <!--<p class="tokenPairingP">ESH / ETH </p> -->
-    </div>
-    <div class="lastPriceDiv" id="lastPrice">
-    </div>
-    <div class="hourDiv" id="hourDiv">
 
+<div class="container bodyhomecnt">
+  <div class="row">
+      <div class="col-md-3 col-sm-3 no-float pr4 w27per">
+      <div class="box">
+        <div class="row-header trn">balance</div>
+        <div id="balance" class="bal scroll"></div>
+      </div>
+      <div class="box volume">
+        <div class="row-header trn vlm">volume</div>
+        <div id="volume" class="vol scroll"></div>
+      </div>
     </div>
-    <div class="contractInfoDiv" id="contractInfo">
-    </div>
-  </div>
-</div>
-  <div class="trading-cont" style="height: 90.5%;">
-    <div class="vertical-split">
-      <div class="component componentTop" style="min-height: 35rem;padding-right: 5px; padding-left: 5px;height: 100%; margin-bottom: 0px !important;">
-        <div class="component-header trn"><img src="Vector.png" style="padding: 5px; height: 20px; padding-top: 3px;">TRADE</div>
-        <div class="thin-hr" style="flex: none; height: 1px; color: #666666; background-color: #2E3D45; margin-left: -5px; width: 103%;"></div>
-        <div class="component-tabs nav-header" style="margin-top: 0;padding-right: 3px;">
-
-          <ul class="nav" role="tablist" style="box-shadow: none; padding: 0;">
-            <li role="presentation" class="nav-item" style="width: 50%;">
-              <a href="#buy" aria-controls="buy" role="tab" data-toggle="tab" class="active nav-link trn buyselltabs" style="    width: 100%;
-    height: 39.84px;
-    text-align: center;
-    border-right: 1px solid #2E3D45;
-    border-bottom: 1px solid #2E3D45;
-    color: #5C6367;
-    line-height: 39.84px;">BUY</a>
-            </li>
-            <li role="presentation" claxss="nav-item" style= "width: 50%;">
-              <a href="#sell" aria-controls="sell" role="tab" data-toggle="tab" class="nav-link trn buyselltabs" style="    width: 100%;
-    height: 39.84px;
-    left:  40px;
-    text-align: center;
-    border-bottom: 1px solid #2E3D45;
-    color: #5C6367;
-    line-height: 39.84px;">SELL</a>
-            </li>
-          </ul>
+    
+      <div class="col-md-6 col-sm-6 no-float pl4 pr4 w46per">
+      <div class="row1">
+        <div class="col-md-12 chart">
+          <div class="row-header trn">price_chart</div>
+          <div class="borderBX">
+          <div id="chartPrice"></div>
+          </div>
         </div>
-        <div class="tab-content" style="margin-top:0.5rem;">
+        <div class="clearfix"></div>
+        <div class="col-md-6 col-sm-6 p0 pr4 pr0r">
+          <div class="buytkn">
+          <div class="row-header trn">buy</div>
           <div role="tabpanel" class="tab-pane active" id="buy"></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 p0 pl4 pl0r">
+          <div class="buytkn">
+          <div class="row-header trn">sell</div>
           <div role="tabpanel" class="tab-pane" id="sell"></div>
-        </div>
-      </div>
-    </div>
-    <div class="vertical">
-      <div class="component" style="height: 100%;">
-        <div class="component-header trn"><img src="orderBook.png" style="padding: 5px; height: 20px; padding-top: 3px;">ORDER BOOK</div>
-        <div class="thin-hr" style="flex: none; height: 1px; color: #666666; background-color: #2E3D45"></div>
-        <div id="orders"></div>
-      </div>
-    </div>
-    <div class="vertical" style="width: 100%; padding-left: 0.2rem">
-      <div class="component" style="height: 50%;">
-        <div style="min-height: 1.8rem;max-height: 1.8rem;overflow: hidden;margin-bottom: 9px;">
-        <div class="component-header trn" style="margin-left:20px;width:30%;float:left;">CHARTS</div>
-        <div class="component-header trn fillHeader" role="tablist" style="box-shadow:none; float:right;">
-          <ul class="nav" role="tablist" style="box-shadow: none;">
-            <li role="presentation" class="nav-item" style="float:right;margin-right:0.6rem;margin-left:0.95rem">
-              <a href="#chartHolder" aria-controls="chartHolder" role="tab" data-toggle="tab" class="nav-link nav-link2 trn openOrdersClass active" >PRICE CHART</a>
-          </li>
-          <li role="presentation" class="nav-item" style="float:right;">
-            <a href="#chartDepth" aria-controls="chartDepth" role="tab" data-toggle="tab" class="openOrdersClass nav-link nav-link2 trn openOrdersClass">DEPTH CHART</a>
-
-          </li>
-        </ul>
           </div>
         </div>
-        <div class="thin-hr" style="flex: none; height: 1px; color: #E5E5E5; background-color: #2E3D45"></div>
-        <div class="tab-content" style="display: flex;">
-          <div role="tabpanel" class="tab-pane active" style="width: 100%;"id="chartHolder">
-          <div id="chartPrice" style="height: 100%;"></div>
-        </div>
-        <div class="tab-pane" role="tabpanel" style="width:100%;"id="chartDepth">
-          <div class="component-tabs" style="height:100%; overflow: hidden">
-          <canvas id="myChart" width="100%" height="100%" style="padding-right: 0.4rem;padding-left:0.4rem;max-height: 500px;"></canvas>
+        <div class="clearfix"></div>
+        <div class="trsctnbx">
+        <div class="row-header trn my-trans">my_transactions</div>
+        <div class="borderBX">
+          <div class="row-box nav-header">
+            <ul class="nav nav-tabs four columns" role="tablist">
+              <li role="presentation" class="active"><a href="#myTrades" aria-controls="myTrades" role="tab" data-toggle="tab" class="trn">trades</a></li>
+              <li role="presentation"><a href="#myOrders" aria-controls="myOrders" role="tab" data-toggle="tab" class="trn">orders</a></li>
+              <li role="presentation"><a href="#myFunds" aria-controls="myFunds" role="tab" data-toggle="tab" class="trn">funds</a></li>
+            </ul>
+          </div>
+          <div class="row-box">
+            <div class="row-box scroll">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="myTrades"></div>
+                <div role="tabpanel" class="tab-pane" id="myOrders"></div>
+                <div role="tabpanel" class="tab-pane" id="myFunds"></div>
+              </div>
+            </div>
           </div>
         </div>
         </div>
-
-      </div>
-      <div class="component" style="height: 49.5%;margin-top: 0.2rem;"><div style="min-height: 1.8rem;max-height: 1.8rem;overflow: hidden">
-        <div class="component-header trn transactionsHeader" style="float: left;width:50%;margin-left:20px;">ORDERS</div>
-        <div class="component-header trn fillHeader" role="tablist" style="box-shadow:none; float:right;">
-          <ul class="nav" role="tablist" style="box-shadow: none;">
-            <li role="presentation" class="nav-item" style="float:right;margin-right:0.6rem;margin-left:0.95rem">
-              <a href="#myOrders" aria-controls="myOrders" role="tab" data-toggle="tab" class="nav-link nav-link2 active trn openOrdersClass" >OPEN</a>
-          </li>
-          <li role="presentation" class="nav-item" style="float:right;">
-            <a href="#myTrades" aria-controls="myTrades" role="tab" data-toggle="tab" class="openOrdersClass nav-link nav-link2 trn openOrdersClass">FILLED</a>
-
-          </li>
-        </ul>
-          </div>
-        </div>
-        <div class="thin-hr" style="flex: none; height: 1px; color: #666666; background-color: #2E3D45"></div>
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane" id="myTrades"></div>
-          <div role="tabpanel" class="tab-pane active" id="myOrders"></div>
-          <div role="tabpanel" class="tab-pane" id="myFunds"></div>
-        </div>
       </div>
     </div>
-    <div class="vertical" style="width: 40%; padding-left: 0.2rem;max-height: 100%;">
-    <div class="component tokenHeader" style="flex-direction: row;height: 100%;">
-      <div class= "tokenInfo" style="float:left;width:48%;display:inline-block">
-      <div class="component-header trn" style="margin-left: 20px;margin-bottom: 9px;">TRADE HISTORY</div>
-      <div class="thin-hr" style="flex: none; height: 1px; color: #E5E5E5; background-color: #2E3D45"></div>
-      <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="trades"></div>
-          <div role="tabpanel" class="tab-pane" id="volume"></div>
+      
+      <div class="col-md-3 col-sm-3 no-float pl4 w27per">
+      <div class="box buy">
+        <div class="row-header trn">order_book</div>
+        <div id="orders" class="ord"></div>
+      </div>
+       <div class="box trade"> <span class="row-header trn">trades</span>
+        <div id="trades" class="trd scroll"></div>
       </div>
     </div>
   </div>
-  </div>
-  </div>
+</div>
 
   <div id="buyTrade"></div>
-    <div id="buyTrade2"></div>
   <div id="sellTrade"></div>
   <div id="importAccount"></div>
   <div id="otherToken"></div>
-  <div id="depositBase"></div>
-    <div id="withdrawBase"></div>
-        <div id="depositToken"></div>
-            <div id="withdrawToken"></div>
   <div id="gasPrice"></div>
   <div id="tokenGuide"></div>
   <div id="screencast"></div>
-  <div id="whitelist"></div>
   <div id="ledger"></div>
-
+  
   <script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
   <script src="/js/jquery.translate.js" type="text/javascript"></script>
   <script src="/js/alertify.min.js" type="text/javascript"></script>
   <script src="/js/ejs_production.js" type="text/javascript"></script>
   <script src="/js/chrome-u2f-api.js" type="text/javascript"></script>
   <script src="/js/ledger.min.js" type="text/javascript"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" type="text/javascript"></script>
+  <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'analyzedmediadeepak/analyzedmediadeepak.github.io',
+        activationElement: false
+      };
+    </script> 
+  <script src="/js/sidecar.v1.js" async defer></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 
-<script type="text/javascript">
-function HideMenu(){
-  if (document.getElementById('burgerMenuDropdown').style.display == 'none'){
-    document.getElementById('burgerMenuDropdown').style.display = 'flex';
-    document.getElementById('balancesDropdown2').style.display = 'none';
-  } else {
-
-    document.getElementById('balancesDropdown2').style.display = 'none';
-    document.getElementById('burgerMenuDropdown').style.display = 'none';
-  }
-}
-</script>
-<script type="text/javascript" src="main.6cfdd60c6d0446e78031.js"></script>
-</div></body>
-
+</body>
 </html>
