@@ -14,7 +14,7 @@
   "ethProvider": "http://localhost:8545",
   "ethGasPrice": 4000000000,
   "ethAddr": "0x0000000000000000000000000000000000000000",
-  "ethAddrPrivateKey": "0d20d8b3337ae8dad130b63a9d72731447db2007a25842d08b47bf21d8c551f4",
+  "ethAddrPrivateKey": "",
   "gasApprove": 250000,
   "gasDeposit": 250000,
   "gasWithdraw": 250000,
