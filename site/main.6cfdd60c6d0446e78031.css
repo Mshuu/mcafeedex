@@ -12952,6 +12952,7 @@ margin-bottom: 0.7rem;
 
 }
 .circleThing{
+  background: #c4c4c4;
   height: 1.4rem;
   width: 1.4rem;
   border-radius: 50%;
@@ -12987,6 +12988,9 @@ color: var(--fith-color);
   flex-direction: row;
   position: relative;
   align-items: center;
+}
+.orderbooktd {
+  cursor : pointer !important;
 }
 .lastPriceDiv{
   flex: 2;
@@ -13140,7 +13144,7 @@ color: var(--seventh-color);
 }
 
 .navbar-brand {
-    background: url(/assets/img/mcflogo.png);
+    background: url(/assets/img/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 2rem;
@@ -13352,6 +13356,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 19px;
+color: #E5E5E5;
 flex: 3;
 font-family: Open Sans;
 font-style: normal;
@@ -13484,6 +13489,7 @@ color: #898989;
   height: 6rem;
   left: 0px;
   top: 0px;
+  background: #2E3D45;
   display: flex;
   margin-bottom: 3rem;
 }
@@ -13518,6 +13524,7 @@ color: #898989;
     padding-left: 0;
 }
 .balanceTR:nth-child(even){
+  background: rgba(46, 61, 69, 0.5);
 }
 .balanceTR:nth-child(n){
 border: 1px solid #2E3D45;
@@ -13980,9 +13987,6 @@ table td:last-child,table th:last-child {
 #orderBookScroll {
     width: 100%;
 }
-.orderbooktd {
-  cursor : pointer !important;
-}
 
 .loader {
     flex: 1;
@@ -14234,6 +14238,7 @@ align-items: center;
 }
 #overlay {
   position: fixed;
+  /* display: none; */
   width: 100%;
   height: 100%;
   top: 0;
