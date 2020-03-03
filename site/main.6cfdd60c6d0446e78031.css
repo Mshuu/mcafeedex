@@ -12883,6 +12883,7 @@ margin-bottom: 0.7rem;
   border-right: 1px solid var(--eigth-color);
   text-align: center;
   text-decoration: none;
+  color: var(--primary-color);
 }
 .basePairText:hover{
   text-decoration: none;
@@ -13143,7 +13144,7 @@ color: var(--seventh-color);
 }
 
 .navbar-brand {
-    background: url(logo.png);
+    background: url(/assets/img/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     height: 2rem;

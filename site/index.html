@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59284329-2"></script>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-59284329-2');
-</script>
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="fa.png" rel="icon" />
-  <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/img/fa.png" type="image/x-icon">
+  <link href="/assets/css/ie10-viewport-bug-workaround.css?v=00001" rel="stylesheet" />
   <title>SwitchDex</title>
-<link href="main.6cfdd60c6d0446e78031.css" rel="stylesheet"></head>
-
+  <link href="main.6cfdd60c6d0446e78031.css?v=00001" rel="stylesheet"></head>
 <body class="dark">
-  <div style="height: 100%">
+  <div style="height:100vh">
     <div id="overlay"></div>
   <nav class="navbar navbar-light navbar-expand-lg">
     <div class="navBarContainer">
@@ -97,7 +86,7 @@
     <div class="mobileMenuSpan" id="navbarDiv2"></div>
     <div class="mobileMenuSpan" id="balancesDiv2"></div>
     <div class="mobileMenuSpan" id="whitelistdiv2"></div>
-     <a class="mobileMenuSpan" href="http://whitelist.switchdex.ag/" target="_blank">Whitelist Checker</a>
+     <a class="mobileMenuSpan" rel="nofollow" href="http://whitelist.switchdex.ag/" target="_blank">Whitelist Checker</a>
     <div class="mobileMenuSpan" id="settingsButton2"></div>
     <div class="mobileMenuSpan" id="accounts2"><div>
   </div>
@@ -121,7 +110,7 @@
   <div class="trading-cont" style="height: 90.5%;">
     <div class="vertical-split">
       <div class="component componentTop" style="min-height: 35rem;padding-right: 5px; padding-left: 5px;height: 100%; margin-bottom: 0px !important;">
-        <div class="component-header trn"><img src="Vector.png" style="padding: 5px; height: 20px; padding-top: 3px;">TRADE</div>
+        <div class="component-header trn"><img src="/assets/img/vector.png" style="padding: 5px; height: 20px; padding-top: 3px;">TRADE</div>
         <div class="thin-hr" style="flex: none; height: 1px; color: #666666; background-color: #2E3D45; margin-left: -5px; width: 103%;"></div>
         <div class="component-tabs nav-header" style="margin-top: 0;padding-right: 3px;">
 
@@ -154,7 +143,8 @@
     </div>
     <div class="vertical">
       <div class="component" style="height: 100%;">
-        <div class="component-header trn"><img src="orderBook.png" style="padding: 5px; height: 20px; padding-top: 3px;">ORDER BOOK</div>
+        <div class="component-header trn">
+          <img src="/assets/img/orderBook.png" style="padding: 5px; height: 20px; padding-top: 3px;">ORDER BOOK</div>
         <div class="thin-hr" style="flex: none; height: 1px; color: #666666; background-color: #2E3D45"></div>
         <div id="orders"></div>
       </div>
@@ -238,20 +228,30 @@
   <div id="screencast"></div>
   <div id="whitelist"></div>
   <div id="ledger"></div>
+  <div id="google_translate_element"></div>
 
-  <script src="/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="/js/jquery.translate.js" type="text/javascript"></script>
-  <script src="/js/alertify.min.js" type="text/javascript"></script>
-  <script src="/js/ejs_production.js" type="text/javascript"></script>
-  <script src="/js/chrome-u2f-api.js" type="text/javascript"></script>
-  <script src="/js/ledger.min.js" type="text/javascript"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+  <script src="/js/jazzicon.js?v=00001" type="text/javascript"></script>
+  <script src="/js/jquery-1.11.1.min.js?v=00001" type="text/javascript"></script>
+  <script src="/js/jquery.translate.js?v=00001" type="text/javascript"></script>
+  <script src="/js/alertify.min.js?v=00001" type="text/javascript"></script>
+  <script src="/js/ejs_production.js?v=00001" type="text/javascript"></script>
+  <script src="/js/chrome-u2f-api.js?v=00001" type="text/javascript"></script>
+  <script src="/js/ledger.min.js?v=00001" type="text/javascript"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" type="text/javascript"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59284329-2"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-
+<script type="text/javascript" src="main.6cfdd60c6d0446e78031.js?v=00001"></script>
+</div>
 <script type="text/javascript">
 function HideMenu(){
   if (document.getElementById('burgerMenuDropdown').style.display == 'none'){
@@ -264,7 +264,12 @@ function HideMenu(){
   }
 }
 </script>
-<script type="text/javascript" src="main.6cfdd60c6d0446e78031.js"></script>
-</div></body>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-59284329-2');
+</script>
 
+</body>
 </html>
