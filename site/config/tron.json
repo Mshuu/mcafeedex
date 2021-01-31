@@ -1,4 +1,5 @@
 {
+  "platform":"tron",
   "contractSwitchDex": "smart_contract/switchdex.sol",
   "contractToken": "smart_contract/token.sol",
   "contractReserveToken": "smart_contract/reservetoken.sol",
@@ -37,11 +38,16 @@
   "gasOrder": 250000,
   "minOrderSize": 0.001,
   "socketServer": [
-    "https://socket.switchdex.ag:8443",
     "https://socket.switchdex.ag:8444",
     "https://socket.switchdex.ag:8445",
     "https://socket.switchdex.ag:8446",
-    "https://socket.switchdex.ag:8447"
+    "https://socket.switchdex.ag:8447",
+    "https://socket.switchdex.ag:8448",
+    "https://socket.switchdex.ag:8450",
+    "https://socket.switchdex.ag:8451",
+    "https://socket.switchdex.ag:8452",
+    "https://socket.switchdex.ag:8453",
+    "https://socket.switchdex.ag:8454"
   ],
   "userCookie": "SwitchDex",
   "eventsCacheCookie": "SwitchDex_eventsCache",
@@ -62,14 +68,188 @@
       "decimals": 18
     },
     {
-      "addr":"TN5VgbGFSqbvUQio5u5zkJHFy5cmDCub3z",
-      "name":"ADRN40",
-      "decimals":18
+      "addr": "TN5VgbGFSqbvUQio5u5zkJHFy5cmDCub3z",
+      "name": "ADRN40",
+      "decimals": 18
+    },
+    {
+      "addr": "tno59khpq46fgf4sd7xswyfnfyfbc8cqnk",
+      "name": "BRAT",
+      "decimals": 6
+    },
+    {
+      "addr": "TSet7TwwHJTf5fzrYytgLosY4xKLn2eQfD",
+      "name": "CWIKI",
+      "decimals": 18
+    },
+    {
+      "addr": "TKxwtxux4vydCJfQfJCACWM1WL3Q8Y9jzy",
+      "name": "coke",
+      "decimals": 6
+    },
+    {
+      "addr": "TRseWF73sdjasSBmDnZdt6gpcsE8ARFuVG",
+      "name": "TERC",
+      "decimals": 18
+    },
+    {
+      "addr": "TV6jkvfAntSDohZF3onVSnpb4wceEPh32a",
+      "name": "BTZC",
+      "decimals": 6
+    },
+    {
+      "addr": "TX8EdSeZQ99TvBbz8SXxxaBMTnEyV3Vmjw",
+      "name": "TATM",
+      "decimals": 6
+    },
+    {
+      "addr": "TKTcfBEKpp5ZRPwmiZ8SfLx8W7CDZ7PHCY",
+      "name": "TWX",
+      "decimals": 6
+    },
+    {
+      "addr": "TVQ6jYV5yTtRsKcD8aRc1a4Kei4V45ixLn",
+      "name": "IGG",
+      "decimals": 6
+    },
+    {
+      "addr": "TUCwcEhuAzPUrdef4bMGXNP9TvpMMBj2BR",
+      "name": "DDOS",
+      "decimals": 18
+    },
+    {
+      "addr": "TJzcEaqgYk9g4jZLEsB2DksLGikM4dWwYJ",
+      "name": "PCB",
+      "decimals": 18
+    },
+    {
+      "addr": "TGHqkFyatmHHQhcjbttC1PneCc7nSgtFXe",
+      "name": "INDY ",
+      "decimals": 6
+    },
+    {
+      "addr": "TDCPc2s8MxFJAtwK2xSH2VoaqoAUpsrCLc",
+      "name": "ACTIV",
+      "decimals": 6
+    },
+    {
+      "addr": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+      "name": "usdt",
+      "decimals": 18
+    },
+    {
+      "addr": "TMX9rNwCMrWqu2Jjx8guhh8WLfXPYJp7DM",
+      "name": "ENGY",
+      "decimals": 6
+    },
+    {
+      "addr": "TP8UsftU7bsVvvUUmF6MR9KhCYwCJzneLB",
+      "name": "TWIN",
+      "decimals": 6
+    },
+    {
+      "addr": "TLa2f6VPqDgRE67v1736s7bJ8Ray5wYjU7",
+      "name": "WIN",
+      "decimals": 6
+    },
+    {
+      "addr": "TCabvq3k6kWeyp2EEGdvXsBZPTKjTSiMPd",
+      "name": "TPORT",
+      "decimals": 6
+    },
+    {
+      "addr": "TLvDJcvKJDi3QuHgFbJC6SeTj3UacmtQU3",
+      "name": "888",
+      "decimals": 18
+    },
+    {
+      "addr": " TTgsrCCitS6Z9yPWrXGCzZigGECE2oVwLE",
+      "name": "GeoC",
+      "decimals": 18
+    },
+    {
+      "addr": "TNq5PbSssK5XfmSYU4Aox4XkgTdpDoEDiY",
+      "name": "TWJ",
+      "decimals": 6
+    },
+    {
+      "addr": "TCKLRjJmhFABs4Hbjy5S3DBFoytMQ95hS4",
+      "name": "Digital Geo Treasure Reward",
+      "decimals": 18
+    },
+    {
+      "addr": "TSxNhv5xbdvF5F8QSQ5ptiKC3soFZUTDzS",
+      "name": "Digital Geo Treasure Token",
+      "decimals": 18
+    },
+    {
+      "addr": "TXWm5yU5FKFpbMDhuN7aMGRsWSU8fGzauW",
+      "name": "XDCA",
+      "decimals": 6
+    },
+    {
+      "addr": "TKTcfBEKpp5ZRPwmiZ8SfLx8W7CDZ7PHCY",
+      "name": "TWLT",
+      "decimals": 18
+    },
+    {
+      "addr": "TN1XmTJ44u7xjtSUNMzjHgjh4ivfS1yP6F",
+      "name": "GRVL",
+      "decimals": 6
+    },
+    {
+      "addr": "TPt8DTDBZYfJ9fuyRjdWJr4PP68tRfptLG",
+      "name": "NOLE",
+      "decimals": 6
+    },
+    {
+      "addr": "TEqWzYT9fk4NCu3YecgEnQrQqxibFz7JDK",
+      "name": "Ccs",
+      "decimals": 0
+    },
+    {
+      "addr": "TVwXxvyYawS21PT1B7XZxBZCMbQZLUENoE",
+      "name": "ATT",
+      "decimals": 6
+    },
+    {
+      "addr": "TPRuU2GbXPwvvSuggE4xKMRtzsfwYfvBWq",
+      "name": "ICD",
+      "decimals": 18
+    },
+    {
+      "addr": "TJASWoyYgUw2M1jvDje7zYLooDCzWYRdkm",
+      "name": "DASH",
+      "decimals": 6
+    },
+    {
+      "addr": "TNo59Khpq46FGf4sD7XSWYFNfYfbc8CqNK",
+      "name": "BNKR",
+      "decimals": 6
+    },
+    {
+      "addr": "TSVePuJurbb95kyr512ifH2ZJ99GvfT9gj",
+      "name": "HRX",
+      "decimals": 6
+    },
+    {
+      "addr": "TWw9oYT7QLpzqMZ8L7xaWKqnNdDiTEWKsi",
+      "name": "CASINO",
+      "decimals": 8
+    },
+    {
+      "addr": "TYap1tRsvCKrhXNKQfZCDQjKodnjDomtxT",
+      "name": "TRDST",
+      "decimals": 6
+    },
+    {
+      "addr": "TYap1tRsvCKrhXNKQfZCDQjKodnjDomtxT",
+      "name": "TRC20",
+      "decimals": 6
     }
-
   ],
   "defaultPair": {
-    "token": "ADRN40",
+    "token": "CWIKI",
     "base": "TRX"
   }
 }
