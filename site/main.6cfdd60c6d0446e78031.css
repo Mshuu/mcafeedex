@@ -12861,6 +12861,17 @@ margin-bottom: 10px;
   float: left;
   right: none;
 }
+
+.selectMarketDropdown > li:nth-child(1){
+    position:sticky !important;
+    top:0 !important;
+}
+.selectMarketDropdown > li:nth-child(2){
+    position:sticky !important;
+    top:50px !important;
+    margin-bottom:10px !important;
+}
+
 .basePairDiv{
   display: flex;
 flex-direction: row;
@@ -14820,3 +14831,4 @@ body.light .price-y-axis path {
 body.light .price-y-axis text {
     fill: rgba(95,101,148,.4)
 }
+
